@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Vue js</h1>
+					<h2>2.0</h2>
+					<h3>Reactive components</h3>
+					<p>
+						<small>-</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Vue.js</h2>
+					<p>
+						Libreria per lo sviluppo di interfacce grafiche reattive
+					</p>
+
+					<p>
+						Basata sui componenti
+					</p>
+				</section>
+
+
+				<section>
+					<h2>Vue.js</h2>
+					<p>
+						Linguaggio di templating <br>
+						simile a mustache
+					</p>
+
+				</section>
+
+
+				<section>
+					<h2>Templating</h2>
+					<p>
+						{{1+1}}<br>
+						{{player.name.toUpperCase()}}
+					</p>
+
+				</section>
+
+				<section>
+					<h2>Templating</h2>
+					<p>
+						può essere utlizzata qualsiasi espressione javascript
+					</p>
+
+				</section>
+
+
+				<section>
+					<h2>Templating</h2>
+					<p>
+						l'espressione viene valutata nel contesto della view
+					</p>
+				</section>
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							Attributi speciali utlizzati per operazioni sui tag
+							hanno sempre il prefisso v-
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							molto simile alle directive di angular 1
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-bind <br>
+							binda il dato della view con un attributo <br>
+							v-bind:href="link_page"
+						</p>
+					</section>
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-bind <br>
+							l'attributo viene modificato automaticamente
+							quando il dato cambia
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-if / v-else <br>
+							visualizzano o meno un elemento in base a uan condizione booleana
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-show / v-hide <br>
+							a differenza di v-if/-vshow rendono invisible l'elemento
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-for <br>
+							cicla una lista di oggetti o le propietà di un oggetto
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-model <br>
+							binding per componenti di una form
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-class <br>
+							binding per le classi
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-style <br>
+							binding per gli style
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							v-on <br>
+							binding un evento a un metodo della view <br>
+							v-on:click="click_handler"
+						</p>
+					</section>
+
+
+
+					<section>
+						<h2>Direttive</h2>
+						<p>
+							shorthand<br>
+							<table>
+								<tr>
+									<td>v-bind:href=</td>
+									<td>:href=</td>
+								</tr>
+								<tr>
+									<td>v-on:click=</td>
+									<td>@click=</td>
+								</tr>
+
+							</table>
+
+						</p>
+					</section>
+
+
+
+					<section>
+						<h2>Computed properties</h2>
+						<p>
+							Proprietà che vengono calcolate e cachate<br>
+						</p>
+					</section>
+
+					<section>
+						<h2>Computed properties</h2>
+						<p>
+							vengono aggiornate quando il dato da cui dipendono cambia
+						</p>
+					</section>
+
+					<section>
+						<h2>Computed properties</h2>
+						<p>
+							full_name : () => this.player.name + ' ' + this.player.surname <br>
+							cambia quando le proprietà name o surname vengono modificate
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Watchers</h2>
+						<p>
+							codice che viene eseguito quando una proprietà della view <br>
+							viene aggiornata
+						</p>
+					</section>
+
+					<section>
+						<h2>Watchers</h2>
+						<p>
+							simili ai watch di angular.js
+						</p>
+					</section>
+
+
+					<section>
+						<h2>Components</h2>
+						<p>
+							vengono usati per incapsulare <br> e riusare codice e comportamenti <br>
+							di una view
+						</p>
+					</section>
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							molto simili ai web components <br>
+							<pre>
+								<code><my-header title="hello"></my-header></code>
+							</pre>
+						</p>
+
+					</section>
+
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							life cycle events<br>
+							eventi di vita del componente <br>
+							simili a quelli di react e web components
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							props<br>
+							simili alle props di react <br>
+							one way data binding <br>
+						</p>
+					</section>
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							props<br>
+							aggiornano la view di un componente automaticamente<br>
+							non c'è bisogno di implementare logiche come<br>
+							shouldComponentUpdate
+						</p>
+					</section>
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							props<br>
+							aggiornano la view di un componente automaticamente<br>
+							non c'è bisogno di implementare logiche come<br>
+							shouldComponentUpdate
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							props<br>
+							possono essere validate in base al tipo
+							</p>
+					</section>
+
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							slots<br>
+							permettono di distribuire contenuti all'interno dei componenti
+							</p>
+					</section>
+
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							sistema di eventi<br>
+							i componenti possono comunicare tra di loro attraverso custom events <br>
+							</p>
+					</section>
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							sistema di eventi<br>
+							molto utile quando un child deve poter comunicare con il proprio parent
+							</p>
+					</section>
+
+
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							async components<br>
+							possono essere istanziati in modalità asincrona <br>
+							con la risoluzione di una promise
+							</p>
+					</section>
+
+					<section >
+						<h2>Components</h2>
+						<p>
+							async components<br>
+							molto utili se abbiamo un progetto molto grosso <br>
+							e vogliamo caricare in modalità lazy <br>
+							css js e html di un component
+							</p>
+					</section>
+
+
+					<section >
+						<h2>Animations</h2>
+						<p>
+								supporto esteso per animazioni e transazioni css <br>
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Animations</h2>
+						<p>
+								può utlizzare anche animazioni javascript <br>
+								facilmente integrabile con velocity o jquery animate
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Vue 2.0</h2>
+				  	<p>
+							riscrittura completa del motore interno di rendering <br>
+							restando compatibile con l'api 1.0 <br>
+							(piccole incompatibilità)
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Virtual DOM</h2>
+				  	<p>
+							basato su un fork di snabbdom.js <br>
+							attualmente uno dei virtual dom più performanti
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Virtual DOM</h2>
+				  	<p>
+							ottimizzazione del rendering <br>
+							separazione delle parti statiche e dinamiche <br>
+							le parti statiche vengono renderizzate solo la prima volta <br>
+							simile a come fa inferno.js
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Reactive Data</h2>
+				  	<p>
+							viene costruito un grafo delle dipendenze <br>
+							per cui un componente viene notificato soltanto quando <br>
+							un dato della view cambia
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Reactive Data</h2>
+				  	<p>
+              la 1.0 aveva un alto grado di atomic updates senza uso <br>
+							di un virtual dom <br>
+							con un alto consumo di memoria per view complesse
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Reactive Data</h2>
+						<p>
+              la 2.0 ha un medio grado di atomic updates con uso <br>
+							di un virtual dom <br>
+							con un minor consumo di memoria e tempi di rendering iniziale
+							più snelli
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Server side rendering</h2>
+						<p>
+							grazie al nuovo virtual dom è possibile renderizzare la view <br>
+							anche server side
+						</p>
+					</section>
+
+
+					<section >
+						<h2>Server side rendering</h2>
+						<p>
+							rehydratation della view client side
+						</p>
+					</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
